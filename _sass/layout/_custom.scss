@@ -1,0 +1,105 @@
+/* Small additions for publication labels and empty media slots. */
+
+.skip-link {
+  position: absolute;
+  left: 0.5rem;
+  top: -4rem;
+  background: var(--global-bg-color, #fff);
+  color: var(--global-text-color, #000);
+  border: 1px solid var(--global-border-color, #ccc);
+  padding: 0.4rem 0.7rem;
+  z-index: 2000;
+}
+
+.skip-link:focus {
+  top: 0.5rem;
+}
+
+.author-me {
+  font-weight: 700;
+}
+
+.label-review {
+  display: inline-block;
+  margin-right: 0.35em;
+  padding: 0.05em 0.45em;
+  border: 1px solid #8a5a00;
+  color: #5c3b00;
+  background: #fff6e5;
+  font-size: 0.72em;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  vertical-align: middle;
+}
+
+.author__avatar img {
+  width: 175px;
+  height: 175px;
+  object-fit: cover;
+  object-position: center 18%;
+}
+
+.pub-meta {
+  margin-top: 0.2rem;
+}
+
+.pub-authors {
+  display: inline;
+}
+
+/* Long institution and email lines need to wrap in the sidebar. */
+.sidebar .author__urls li {
+  white-space: normal;
+}
+
+.media-slot {
+  margin: 1.4rem 0 1.8rem;
+}
+
+.media-slot img,
+.media-slot video {
+  max-width: 100%;
+  height: auto;
+}
+
+.media-slot__frame {
+  border: 1px dashed #6d767c;
+  background: #f6f7f8;
+  min-height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.25rem;
+}
+
+.media-slot__frame p {
+  margin: 0.35rem 0 0;
+}
+
+.media-slot figcaption {
+  margin-top: 0.45rem;
+}
+
+.video-embed {
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  background: #111;
+}
+
+.video-embed iframe,
+.video-embed video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.research-themes {
+  padding-left: 1.2rem;
+}

@@ -1,0 +1,58 @@
+{% comment %}
+  Figure or video slot for project pages.
+  A figure appears automatically once the image file exists.
+  A video appears when youtube_id, vimeo_id, or mp4 is set.
+{% endcomment %}
+{% assign media_path = include.path %}
+{% assign media_found = false %}
+{% if media_path %}
+  {% for static_file in site.static_files %}
+    {% if static_file.path == media_path %}
+      {% assign media_found = true %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+<figure class="media-slot">
+  {% if include.youtube_id and include.youtube_id != blank %}
+    <div class="video-embed">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/{{ include.youtube_id }}"
+        title="{{ include.alt | default: 'Project video' }}"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+  {% elsif include.vimeo_id and include.vimeo_id != blank %}
+    <div class="video-embed">
+      <iframe
+        src="https://player.vimeo.com/video/{{ include.vimeo_id }}"
+        title="{{ include.alt | default: 'Project video' }}"
+        loading="lazy"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  {% elsif include.mp4 and include.mp4 != blank %}
+    <div class="video-embed">
+      <video controls preload="metadata" src="{{ include.mp4 | relative_url }}">
+        <a href="{{ include.mp4 | relative_url }}">Download the video</a>
+      </video>
+    </div>
+  {% elsif media_found %}
+    <img src="{{ media_path | relative_url }}" alt="{{ include.alt | escape }}">
+  {% else %}
+    <div class="media-slot__frame" role="img" aria-label="{{ include.alt | default: 'Media placeholder' | escape }}">
+      <div>
+        <strong>{{ include.label | default: "Add a file" }}</strong>
+        {% if media_path %}
+          <p>Save the file as <code>{{ media_path }}</code></p>
+        {% else %}
+          <p>Add <code>youtube_id</code>, <code>vimeo_id</code>, or <code>mp4</code> to this include.</p>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+  {% if include.caption %}
+    <figcaption>{{ include.caption }}</figcaption>
+  {% endif %}
+</figure>

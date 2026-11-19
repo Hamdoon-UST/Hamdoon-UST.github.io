@@ -1,0 +1,4 @@
+The sidebar photo is images/profile.jpg.
+It is the official headshot. Replace that file to change the picture, and keep the filename.
+_config.yml sets author.avatar to profile.jpg.
+The theme draws the photo as a circle.
