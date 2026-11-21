@@ -103,3 +103,29 @@
 .research-themes {
   padding-left: 1.2rem;
 }
+
+.page__content .media-slot {
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.media-slot-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-items: start;
+  max-width: 52rem;
+  margin: 1.4rem auto 1.8rem;
+}
+
+.media-slot-row .media-slot {
+  max-width: none;
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .media-slot-row {
+    grid-template-columns: 1fr;
+  }
+}
