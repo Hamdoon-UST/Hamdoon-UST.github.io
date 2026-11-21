@@ -30,7 +30,7 @@ In this project I used computational fluid dynamics (CFD) to study how wind move
 %}
 </div>
 
-<div class="media-slot-row">
+
 {% include media-slot.html
    path="/images/projects/urban-airflow/wind_vel.png"
    width="60%"
