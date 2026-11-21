@@ -2,6 +2,10 @@
   Figure or video slot for project pages.
   A figure appears automatically once the image file exists.
   A video appears when youtube_id, vimeo_id, or mp4 is set.
+
+  Optional width: a number plus %, rem, em, or px (70%, 12rem, 400px).
+  Anything else is ignored, so the value cannot inject CSS.
+  Checked in that order because "rem" contains "em".
 {% endcomment %}
 {% assign media_path = include.path %}
 {% assign media_found = false %}
@@ -13,7 +17,84 @@
   {% endfor %}
 {% endif %}
 
-<figure class="media-slot">
+{% assign width_safe = "" %}
+{% assign width_raw = include.width | default: "" | strip | downcase %}
+{% if width_raw != "" %}
+  {% assign width_unit = "" %}
+  {% assign width_number = "" %}
+
+  {% assign width_stripped = width_raw | remove: "rem" %}
+  {% assign width_removed = width_raw.size | minus: width_stripped.size %}
+  {% if width_removed == 3 %}
+    {% assign width_compact = width_raw | remove: " " %}
+    {% assign width_rebuilt = width_stripped | strip | append: "rem" %}
+    {% if width_compact == width_rebuilt %}
+      {% assign width_unit = "rem" %}
+      {% assign width_number = width_stripped | strip %}
+    {% endif %}
+  {% endif %}
+
+  {% if width_unit == "" %}
+    {% assign width_stripped = width_raw | remove: "em" %}
+    {% assign width_removed = width_raw.size | minus: width_stripped.size %}
+    {% if width_removed == 2 %}
+      {% assign width_compact = width_raw | remove: " " %}
+      {% assign width_rebuilt = width_stripped | strip | append: "em" %}
+      {% if width_compact == width_rebuilt %}
+        {% assign width_unit = "em" %}
+        {% assign width_number = width_stripped | strip %}
+      {% endif %}
+    {% endif %}
+  {% endif %}
+
+  {% if width_unit == "" %}
+    {% assign width_stripped = width_raw | remove: "px" %}
+    {% assign width_removed = width_raw.size | minus: width_stripped.size %}
+    {% if width_removed == 2 %}
+      {% assign width_compact = width_raw | remove: " " %}
+      {% assign width_rebuilt = width_stripped | strip | append: "px" %}
+      {% if width_compact == width_rebuilt %}
+        {% assign width_unit = "px" %}
+        {% assign width_number = width_stripped | strip %}
+      {% endif %}
+    {% endif %}
+  {% endif %}
+
+  {% if width_unit == "" %}
+    {% assign width_stripped = width_raw | remove: "%" %}
+    {% assign width_removed = width_raw.size | minus: width_stripped.size %}
+    {% if width_removed == 1 %}
+      {% assign width_compact = width_raw | remove: " " %}
+      {% assign width_rebuilt = width_stripped | strip | append: "%" %}
+      {% if width_compact == width_rebuilt %}
+        {% assign width_unit = "%" %}
+        {% assign width_number = width_stripped | strip %}
+      {% endif %}
+    {% endif %}
+  {% endif %}
+
+  {% assign width_ok = false %}
+  {% if width_unit != "" and width_number != blank and width_number.size < 17 %}
+    {% assign width_leftover = width_number | remove: "0" | remove: "1" | remove: "2" | remove: "3" | remove: "4" | remove: "5" | remove: "6" | remove: "7" | remove: "8" | remove: "9" | remove: "." %}
+    {% if width_leftover == "" %}
+      {% assign width_parts = width_number | append: "X" | split: "." %}
+      {% assign width_part_count = width_parts | size %}
+      {% if width_part_count == 1 %}
+        {% assign width_ok = true %}
+      {% elsif width_part_count == 2 %}
+        {% assign width_frac = width_parts | last %}
+        {% if width_frac != "X" and width_frac != blank %}
+          {% assign width_ok = true %}
+        {% endif %}
+      {% endif %}
+    {% endif %}
+  {% endif %}
+  {% if width_ok %}
+    {% assign width_safe = width_number | append: width_unit %}
+  {% endif %}
+{% endif %}
+
+<figure class="media-slot{% if width_safe != blank %} media-slot--sized{% endif %}"{% if width_safe != blank %} style="--media-slot-width: {{ width_safe }}"{% endif %}>
   {% if include.youtube_id and include.youtube_id != blank %}
     <div class="video-embed">
       <iframe

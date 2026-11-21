@@ -79,6 +79,8 @@
 }
 
 .media-slot figcaption {
+  flex-basis: 100%;
+  width: 100%;
   margin-top: 0.45rem;
 }
 
@@ -110,9 +112,22 @@
   margin-right: auto;
 }
 
+/* width from the include. The picture and caption share this box. */
+.media-slot.media-slot--sized {
+  width: var(--media-slot-width);
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.media-slot--sized .media-slot__frame,
+.media-slot--sized .video-embed {
+  width: 100%;
+}
+
 .media-slot-row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 1rem;
   align-items: start;
   max-width: 52rem;
@@ -122,10 +137,20 @@
 .media-slot-row .media-slot {
   max-width: none;
   margin: 0;
+  min-width: 0;
+}
+
+/* In a row, width is a share of that figure's column and cannot leave it. */
+.media-slot-row .media-slot.media-slot--sized {
+  width: var(--media-slot-width);
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-self: center;
 }
 
 @media (max-width: 700px) {
   .media-slot-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
