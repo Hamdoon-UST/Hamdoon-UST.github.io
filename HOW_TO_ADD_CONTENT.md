@@ -75,6 +75,24 @@ The dashed-box version, which switches to the real image when the file is there:
 %}
 ```
 
+### Choose a width for one figure
+
+`width` is optional. It sets that figure only, picture and caption together, and the figure stays centered. Leave it out for the usual size, about 40rem wide. Change the value in the project page and commit that file. You do not edit the CSS.
+
+```liquid
+{% include media-slot.html
+   path="/images/projects/my-project/figure-1.jpg"
+   width="70%"
+   alt="Flow at 50 degrees angle of attack"
+   label="Figure 1"
+   caption="Figure 1. One sentence saying what the reader is looking at."
+%}
+```
+
+Use a percentage of the text column, such as `50%` or `70%`, or a length such as `12rem`, `12.5em`, or `400px`. On a narrow screen the figure still shrinks to fit. Any other value is ignored and the figure stays at the usual size.
+
+To put two figures side by side, wrap two includes in `<div class="media-slot-row">`. They stay in two columns, and in one column on a narrow screen. A `width` on one of them is relative to that figure’s own column, and it will not grow wider than the column. Omit `width` and the figure fills its column.
+
 ### Copy-paste project template
 
 Save this as `_portfolio/my-project.md`, then change every `my-project` and the sentences.
