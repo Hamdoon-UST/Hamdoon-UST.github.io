@@ -10,7 +10,7 @@ In this project I used computational fluid dynamics (CFD) to study how wind move
 
 {% include media-slot.html
    path="/images/projects/urban-airflow/CAD.png"
-   width="50%"
+   width="60%"
    alt="Three-dimensional model of the study area, showing street layout, low-rise buildings, and taller towers"
    label="Figure 1"
    caption="Figure 1. Three-dimensional model of the study area. The model captures the street layout, closely spaced low-rise buildings, and several taller towers. Differences in building height and spacing shape the paths available for wind to move through the neighbourhood."
@@ -32,6 +32,7 @@ In this project I used computational fluid dynamics (CFD) to study how wind move
 
 {% include media-slot.html
    path="/images/projects/urban-airflow/wind_vel.png"
+   width="60%"
    alt="Simulated wind speed over the district, with faster flow in broad street corridors"
    label="Figure 3"
    caption="Figure 3. Simulated wind speed. Several broad street corridors carry faster-moving air into the neighbourhood, while many spaces inside the blocks remain sheltered. A local increase in wind speed is visible around the corner of the large building just left of centre."
@@ -39,6 +40,7 @@ In this project I used computational fluid dynamics (CFD) to study how wind move
 
 {% include media-slot.html
    path="/images/projects/urban-airflow/PET.png"
+   width="60%"
    alt="Outdoor thermal comfort as PET, from 32 to 44 degrees Celsius"
    label="Figure 4"
    caption="Figure 4. Outdoor thermal comfort expressed as PET. The colour scale spans 32–44 °C PET. Lower values follow parts of the broad street corridors, while higher values appear in several sheltered interior spaces. Comparing this map with the wind-speed figure helps identify streets where stronger airflow coincides with lower thermal exposure."
