@@ -6,7 +6,7 @@ date: 2026-01-03
 permalink: /projects/wave-metamaterials/
 ---
 
-This is my doctoral research at The Hong Kong University of Science and Technology: using metamaterials to control shallow-water waves. Figures, a written case study, and video were not included with the material used to build this page. The slots below show the files to add.
+My doctoral research at The Hong Kong University of Science and Technology (HKUST) focuses on using metamaterials to manipulate water waves for coastal protection. My work integrates theoretical modeling, laboratory experiments, and numerical simulations using OpenFOAM.
 
 {% comment %}
 {% include media-slot.html
