@@ -30,4 +30,4 @@ This is my doctoral research at The Hong Kong University of Science and Technolo
    label="Video"
    caption="Video. To show one, edit this include in _portfolio/wave-metamaterials.md and set youtube_id, vimeo_id, or mp4. YouTube and Vimeo are the better default. A local MP4 belongs in files/videos/ and must stay under GitHub’s 100 MB file limit. The copy-paste lines are in HOW_TO_ADD_CONTENT.md."
 %}
-{% comment %}
+{% endcomment %}
