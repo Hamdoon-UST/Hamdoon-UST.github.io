@@ -10,7 +10,7 @@ In this project I used computational fluid dynamics (CFD) to study how wind move
 
 {% include media-slot.html
    path="/images/projects/urban-airflow/CAD.png"
-   idth="50%"
+   width="50%"
    alt="Three-dimensional model of the study area, showing street layout, low-rise buildings, and taller towers"
    label="Figure 1"
    caption="Figure 1. Three-dimensional model of the study area. The model captures the street layout, closely spaced low-rise buildings, and several taller towers. Differences in building height and spacing shape the paths available for wind to move through the neighbourhood."
