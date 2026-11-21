@@ -15,19 +15,20 @@ In this project I used computational fluid dynamics (CFD) to study how wind move
    caption="Figure 1. Three-dimensional model of the study area. The model captures the street layout, closely spaced low-rise buildings, and several taller towers. Differences in building height and spacing shape the paths available for wind to move through the neighbourhood."
 %}
 
+<div class="media-slot-row">
 {% include media-slot.html
    path="/images/projects/urban-airflow/Mesh1.png"
    alt="Close-up of the triangular surface mesh on building façades, rooftops, and streets"
    label="Figure 2a"
    caption="Figure 2a. Surface mesh around individual buildings. This close-up shows the triangular mesh across façades, rooftops, and streets. The fine spacing around building edges and in narrow passages helps the simulation resolve local changes in airflow."
 %}
-
 {% include media-slot.html
    path="/images/projects/urban-airflow/mesh2.png"
    alt="Plan view of mesh refinement across the district, finest along buildings and streets"
    label="Figure 2b"
    caption="Figure 2b. Mesh refinement across the district. In plan view, the mesh is finest along building footprints and within the street network. The elements gradually increase in size outside the built-up area, concentrating computational effort where the geometry is most detailed."
 %}
+</div>
 
 {% include media-slot.html
    path="/images/projects/urban-airflow/wind_vel.png"
