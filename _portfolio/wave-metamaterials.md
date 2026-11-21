@@ -1,6 +1,6 @@
 ---
-title: "Shallow-water waves and metamaterials"
-excerpt: "Doctoral research on controlling shallow-water waves with metamaterials."
+title: "Control of water waves using metamaterials"
+excerpt: "Doctoral research on controlling water waves with metamaterials for the purpose of coastal protection."
 collection: portfolio
 date: 2026-01-03
 permalink: /projects/wave-metamaterials/
