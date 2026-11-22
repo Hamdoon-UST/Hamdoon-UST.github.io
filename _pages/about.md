@@ -15,7 +15,7 @@ Current research themes:
 
 <ul class="research-themes">
   <li><a href="{{ '/projects/wave-metamaterials/' | relative_url }}">Controlling water waves using metamaterials</a></li>
-  <li><a href="{{ '/projects/hemisphere-cylinder/' | relative_url }}">Vortex dynamics of hemisphere–cylinder bodies</a></li>
+  <li><a href="{{ '/projects/hemisphere-cylinder/' | relative_url }}">Vortex dynamics of bluff bodies</a></li>
   <li><a href="{{ '/projects/urban-airflow/' | relative_url }}">District-scale urban wind environment & thermal comfort</a></li>
 </ul>
 
