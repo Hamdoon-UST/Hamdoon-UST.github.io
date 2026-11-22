@@ -1,0 +1,8 @@
+{% comment %}
+  About page only. Order is representative_order, not date.
+  /publications/ and the CV still list every paper and ignore these fields.
+{% endcomment %}
+{% assign representative_publications = site.publications | where_exp: "item", "item.representative" | sort: "representative_order" %}
+{% for post in representative_publications %}
+  {% include archive-single.html %}
+{% endfor %}
