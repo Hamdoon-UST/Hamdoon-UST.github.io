@@ -50,7 +50,9 @@
               {% if post.venue %}<em>{{ post.venue }}</em>{% endif %}{% if post.year %}, {{ post.year }}{% elsif post.date %}, {{ post.date | date: "%Y" }}{% endif %}
             {% endif %}
             {% if post.paperurl %}
-              <br /><a href="{{ post.paperurl }}">DOI</a>
+              <br /><a href="{{ post.paperurl }}">DOI</a>{% if post.pdf %} <a href="{{ base_path }}{{ post.pdf }}">[PDF]</a>{% endif %}
+            {% elsif post.pdf %}
+              <br /><a href="{{ base_path }}{{ post.pdf }}">[PDF]</a>
             {% endif %}
           </p>
         {% elsif post.collection == 'portfolio' %}

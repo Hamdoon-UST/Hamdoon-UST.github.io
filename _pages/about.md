@@ -23,8 +23,8 @@ Please write to <a href="mailto:hijaz@connect.ust.hk">hijaz@connect.ust.hk</a> i
 
 ## Publications
 
-Journal articles, conference papers, and work under review are listed below. The full list is also on the [publications page]({{ '/publications/' | relative_url }}). My name is marked in bold.
+Representative papers are listed below. The complete list is on the [publications page]({{ '/publications/' | relative_url }}). My name is marked in bold.
 
 {::nomarkdown}
-{% include publication-list.html %}
+{% include representative-publications.html %}
 {:/nomarkdown}

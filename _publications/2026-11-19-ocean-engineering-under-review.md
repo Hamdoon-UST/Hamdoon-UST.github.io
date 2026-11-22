@@ -4,6 +4,8 @@ collection: publications
 category: under_review
 status: under-review
 review_label: "Revised manuscript under review"
+representative: true
+representative_order: 1
 permalink: /publication/ocean-engineering-under-review
 date: 2026-11-19
 venue: "Ocean Engineering"

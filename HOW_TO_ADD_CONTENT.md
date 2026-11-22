@@ -37,11 +37,16 @@ Copy an existing file and change the fields. The fields that matter:
 | `category` | `manuscripts` for a journal, `conferences` for a conference, `under_review` for a manuscript still in review |
 | `status` | `under-review` for a manuscript still in review. Leave it out for a published paper |
 | `paperurl` | `https://doi.org/...` when a DOI exists |
+| `pdf` | A site path such as `/files/papers/short-name.pdf` when a PDF should be linked. Leave it out when there is no file |
 | `authors_html` | Authors in order. Wrap your own name as `<strong class="author-me">Hamdoon Ijaz</strong>` |
 | `citation` | The line that appears on the CV |
 | `permalink` | A short web address, such as `/publication/short-name` |
+| `representative` | `true` to include the paper in the short list on the About page. Leave it out for every other paper |
+| `representative_order` | A whole number for that About-page list. `1` is first. This order is not the publication date |
 
-A paper under review has `category: under_review` and `status: under-review`. Add `review_label` if the status is more specific than “Under review”, for example `Revised manuscript under review`. Leave `paperurl` empty until there is a DOI. The Ocean Engineering manuscript is `_publications/2026-11-19-ocean-engineering-under-review.md`.
+A paper under review has `category: under_review` and `status: under-review`. Add `review_label` if the status is more specific than “Under review”, for example `Revised manuscript under review`. Leave `paperurl` empty until there is a DOI. Leave `pdf` out when there is no file. The Ocean Engineering manuscript is `_publications/2026-11-19-ocean-engineering-under-review.md` and has neither.
+
+The About page uses `_includes/representative-publications.html` and shows only papers with `representative: true`, in `representative_order`. The publications page and the CV still list every paper, newest first. Those pages do not read `representative` or `representative_order`. When `pdf` is set, the About list and the publications page show a `[PDF]` link beside the DOI.
 
 Below the `---` block, write a few sentences in your own words. That text is the paper’s page on the site. The list of papers uses the fields above, not this paragraph.
 

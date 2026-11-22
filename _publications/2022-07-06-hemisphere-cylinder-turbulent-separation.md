@@ -2,11 +2,14 @@
 title: "Unsteady vortex flows around a hemisphere—cylinder body with turbulent separation"
 collection: publications
 category: manuscripts
+representative: true
+representative_order: 3
 permalink: /publication/hemisphere-cylinder-turbulent-separation
 date: 2022-07-06
 year: 2022
 venue: "Physics of Fluids"
 paperurl: "https://doi.org/10.1063/5.0095746"
+pdf: "/files/papers/hemisphere-cylinder-turbulent-separation.pdf"
 authors_html: "<strong class=\"author-me\">Hamdoon Ijaz</strong>, Bao-Feng Ma"
 citation: "<strong class=\"author-me\">Hamdoon Ijaz</strong>, Bao-Feng Ma (2022). &quot;Unsteady vortex flows around a hemisphere—cylinder body with turbulent separation&quot; <em>Physics of Fluids</em>, 34(7), 077105. <a href=\"https://doi.org/10.1063/5.0095746\">https://doi.org/10.1063/5.0095746</a>"
 excerpt: ""
