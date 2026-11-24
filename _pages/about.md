@@ -21,7 +21,7 @@ Current research themes:
 
 Please write to <a href="mailto:hijaz@connect.ust.hk">hijaz@connect.ust.hk</a> if you would like to discuss this work.
 
-## Publications
+## Representative Publications
 
 Representative papers are listed below. The complete list is on the [publications page]({{ '/publications/' | relative_url }}). My name is marked in bold.
 
