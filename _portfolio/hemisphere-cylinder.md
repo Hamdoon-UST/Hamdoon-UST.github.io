@@ -51,11 +51,6 @@ I used computational fluid dynamics (CFD) to study how vortices form and move ar
    caption="Figure 4. Three-dimensional vortex motion · Video. The animation follows the vortices along the body, showing how the forebody oscillations seen in cross-section fit into the wider flow and how vortices shed farther downstream."
 %}
 
-## Related publications
-
-* Hamdoon Ijaz and Bao-Feng Ma (2022). [Unsteady vortex flows around a hemisphere–cylinder body with turbulent separation](/publication/hemisphere-cylinder-turbulent-separation) ([https://doi.org/10.1063/5.0095746](https://doi.org/10.1063/5.0095746)). *Physics of Fluids*, 34, 077105. <a href="/files/papers/hemisphere-cylinder-turbulent-separation.pdf">[PDF]</a>
-* Hamdoon Ijaz, Bao-Feng Ma, and Peixin Dong (2026). [Effects of aftbody vortex shedding on forebody vortex oscillation over hemisphere–cylinder bodies](/publication/aftbody-vortex-shedding) ([https://doi.org/10.1063/5.0352022](https://doi.org/10.1063/5.0352022)). *Physics of Fluids*, 38, 118108. <a href="/files/papers/aftbody-vortex-shedding.pdf">[PDF]</a>
-
 {% include media-slot.html
    path="/images/projects/hemisphere-cylinder/dmd-m1-aoa-30.jpg"
    width="100%"
@@ -63,3 +58,8 @@ I used computational fluid dynamics (CFD) to study how vortices form and move ar
    label="Figure 5"
    caption="Figure 5. Vortex oscillation modes · DMD figure. Dynamic mode decomposition (DMD) identifies patterns that repeat in the flow. At 30°, the vortex pair oscillates weakly and in phase. At 50°, the leading mode is antisymmetric: the two forebody vortices oscillate out of phase."
 %}
+
+## Related publications
+
+* Hamdoon Ijaz and Bao-Feng Ma (2022). [Unsteady vortex flows around a hemisphere–cylinder body with turbulent separation](/publication/hemisphere-cylinder-turbulent-separation) ([https://doi.org/10.1063/5.0095746](https://doi.org/10.1063/5.0095746)). *Physics of Fluids*, 34, 077105. <a href="/files/papers/hemisphere-cylinder-turbulent-separation.pdf">[PDF]</a>
+* Hamdoon Ijaz, Bao-Feng Ma, and Peixin Dong (2026). [Effects of aftbody vortex shedding on forebody vortex oscillation over hemisphere–cylinder bodies](/publication/aftbody-vortex-shedding) ([https://doi.org/10.1063/5.0352022](https://doi.org/10.1063/5.0352022)). *Physics of Fluids*, 38, 118108. <a href="/files/papers/aftbody-vortex-shedding.pdf">[PDF]</a>
