@@ -1,40 +1,65 @@
 ---
-title: "Hemisphere–cylinder vortex dynamics"
-excerpt: "Unsteady leeward vortices on a hemisphere–cylinder at high Reynolds number."
+title: "Vortex Dynamics of Bluff Bodies"
+excerpt: "I used computational fluid dynamics (CFD) to study how vortices form and move around a cylinder with a hemispherical nose."
 collection: portfolio
 date: 2022-07-06
 permalink: /projects/hemisphere-cylinder/
 ---
 
-This project is the vortex flow over a hemisphere–cylinder body when the boundary layer separates as a turbulent flow. It is reported in two journal articles with Bao-Feng Ma, the second also with Peixin Dong.
-
-In the 2022 study we simulated a body of fineness ratio 24.5 with detached-eddy simulation at angles of attack from 30° to 80°. The Reynolds number based on cylinder diameter was fixed at
-
-$$\mathrm{Re}_D = 3.0 \times 10^{6}.$$
-
-Dynamic mode decomposition was used to separate the unsteady motion. Below about 45° the downstream wake moved only weakly, and in phase, unlike the laminar-separation cases in earlier literature. Above about 45° the flow split into slower forebody vortex oscillation and faster shedding from the aft body. The oscillation produced the larger sectional side force. At 50° the leading oscillatory mode was antisymmetric. From 50° to 80°, shedding frequencies along the aft cylinder collapsed approximately onto one line when they were scaled by the cross-flow speed normal to the axis. The oscillation frequencies did not follow that scaling.
-
-The 2026 study asks whether that drop in oscillation frequency is caused by the aft-body shedding. Large-eddy simulations at 30° and 50°, across several fineness ratios, still show forebody oscillation after the aft body is shortened enough that shedding disappears. The frequency change is a property of the forebody vortices. Shortening the aft body changes their amplitude and frequency only slightly, and slightly downward.
-
-* <a href="https://doi.org/10.1063/5.0095746">Ijaz and Ma, Physics of Fluids 34, 077105 (2022)</a>
-* <a href="https://doi.org/10.1063/5.0352022">Ijaz, Ma, and Dong, Physics of Fluids 38, 118108 (2026)</a>
+I used computational fluid dynamics (CFD) to study how vortices form and move around a cylinder with a hemispherical nose. At a 30° angle of attack, the vortices oscillated weakly and the side force stayed close to zero. At higher angles, the vortices over the front of the body oscillated more strongly, while vortices shed from the rear. By comparing flow animations with force measurements from the simulations, I examined how these changes in the flow affected the sideways loading on the body.
 
 {% include media-slot.html
-   path="/images/projects/hemisphere-cylinder/figure-1.jpg"
-   alt="Hemisphere-cylinder geometry and surface flow"
+   path="/images/projects/hemisphere-cylinder/vortex-oscillation-shedding.jpg"
+   width="100%"
+   alt="Two panels. Left: a simulation of a long rounded-nose body covered in blue, green, yellow, and red vortical structures, with arrows marking vortex oscillation (VO) near the nose and vortex shedding (VS) farther downstream. Right: a photograph of an aircraft at high angle of attack, with a pale cloud of vapour streaming along the fuselage."
    label="Figure 1"
-   caption="Figure 1. Geometry or surface flow. Save it as images/projects/hemisphere-cylinder/figure-1.jpg (about 1600 pixels wide)."
+   caption="Figure 1. Vortex oscillation and shedding. The simulation on the left shows two regions: vortex oscillation (VO) near the nose and vortex shedding (VS) farther downstream. The aircraft photograph on the right provides a visual analogy for the flow at high angle of attack."
 %}
 
+<figure class="media-slot-row">
 {% include media-slot.html
-   path="/images/projects/hemisphere-cylinder/figure-2.jpg"
-   alt="Dynamic mode of the leeward vortices"
-   label="Figure 2"
-   caption="Figure 2. A mode or wake view at images/projects/hemisphere-cylinder/figure-2.jpg."
+   mp4="/files/videos/hemisphere-cylinder/small-oscillations.mp4"
+   alt="Animation of a flow cross-section. A circular body sits beneath a pair of vortices drawn with dense streamlines, one on each side of the centreline. The pair shifts only slightly."
+   label="Figure 2 video"
 %}
+{% include media-slot.html
+   path="/images/projects/hemisphere-cylinder/forces-aoa-30.jpg"
+   alt="Line chart titled alpha equals 30 degrees, with time in seconds on the horizontal axis. The legend shows C_z total in red, C_y total in blue, and C_x total in green. The red line stays near zero, the blue line stays near 0.55, and the green line stays just above zero."
+   label="Figure 2 force plot"
+%}
+<figcaption>Figure 2. Small oscillations at 30° · Sectional video and force plot. The video shows weak motion of the vortex pair in a cross-section of the flow. In the accompanying plot, the total side-force coefficient (red) stays close to zero.</figcaption>
+</figure>
+
+<figure class="media-slot-row">
+{% include media-slot.html
+   mp4="/files/videos/hemisphere-cylinder/aoa-50-oscillations.mp4"
+   alt="Animation of a flow cross-section coloured by streamwise X-vorticity, red for positive and blue for negative. Above a circular body, the red and blue regions move from one side of the body to the other. A time readout in seconds is shown."
+   label="Figure 3 video"
+%}
+{% include media-slot.html
+   path="/images/projects/hemisphere-cylinder/forces-aoa-45.jpg"
+   alt="Line chart titled alpha equals 45 degrees, with time in seconds on the horizontal axis. The legend shows C_z total in red, C_y total in blue, and C_x total in green. The red line swings between large positive and negative values, the blue line stays near 1.4 with small ripples, and the green line stays near zero."
+   label="Figure 3 force plot"
+%}
+<figcaption>Figure 3. Larger oscillations at high angle of attack · Sectional video and force plot. The 50° video shows the forebody vortices moving alternately on either side of the body. The force plot shown here, labelled 45°, illustrates the much larger side-force fluctuations in the high-angle regime.</figcaption>
+</figure>
 
 {% include media-slot.html
-   alt="Video of hemisphere-cylinder vortex motion"
-   label="Video"
-   caption="Video slot. Add youtube_id, vimeo_id, or mp4 on the include in this file. See the wave-metamaterials page for copy-paste examples, and HOW_TO_ADD_CONTENT.md for file-size limits."
+   mp4="/files/videos/hemisphere-cylinder/three-dimensional-vortices.mp4"
+   alt="Three-dimensional animation of a slender body with a rounded nose. Coloured vortical structures run along the body, shifting near the nose and extending downstream. A colour bar for streamwise vorticity and an X-Y-Z axis triad are shown."
+   label="Figure 4"
+   caption="Figure 4. Three-dimensional vortex motion · Video. The animation follows the vortices along the body, showing how the forebody oscillations seen in cross-section fit into the wider flow and how vortices shed farther downstream."
+%}
+
+## Related publications
+
+* Hamdoon Ijaz and Bao-Feng Ma (2022). [Unsteady vortex flows around a hemisphere–cylinder body with turbulent separation](/publication/hemisphere-cylinder-turbulent-separation) ([https://doi.org/10.1063/5.0095746](https://doi.org/10.1063/5.0095746)). *Physics of Fluids*, 34, 077105. <a href="/files/papers/hemisphere-cylinder-turbulent-separation.pdf">[PDF]</a>
+* Hamdoon Ijaz, Bao-Feng Ma, and Peixin Dong (2026). [Effects of aftbody vortex shedding on forebody vortex oscillation over hemisphere–cylinder bodies](/publication/aftbody-vortex-shedding) ([https://doi.org/10.1063/5.0352022](https://doi.org/10.1063/5.0352022)). *Physics of Fluids*, 38, 118108. <a href="/files/papers/aftbody-vortex-shedding.pdf">[PDF]</a>
+
+{% include media-slot.html
+   path="/images/projects/hemisphere-cylinder/dmd-m1-aoa-30.jpg"
+   width="100%"
+   alt="Dynamic mode decomposition figure labelled M1 mode, alpha equals 30 degrees. Three rows are marked x direction (axial), y direction (normal), and z direction (lateral). Each row shows red and blue vortical structures along a slender grey body, with a wider view on the left and a closer view on the right."
+   label="Figure 5"
+   caption="Figure 5. Vortex oscillation modes · DMD figure. Dynamic mode decomposition (DMD) identifies patterns that repeat in the flow. At 30°, the vortex pair oscillates weakly and in phase. At 50°, the leading mode is antisymmetric: the two forebody vortices oscillate out of phase."
 %}
