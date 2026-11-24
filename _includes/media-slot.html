@@ -114,8 +114,8 @@
         allowfullscreen></iframe>
     </div>
   {% elsif include.mp4 and include.mp4 != blank %}
-    <div class="video-embed">
-      <video controls preload="metadata" src="{{ include.mp4 | relative_url }}">
+    <div class="video-embed video-embed--file">
+      <video controls preload="metadata" src="{{ include.mp4 | relative_url }}"{% if include.alt and include.alt != blank %} aria-label="{{ include.alt | escape }}"{% endif %}>
         <a href="{{ include.mp4 | relative_url }}">Download the video</a>
       </video>
     </div>
