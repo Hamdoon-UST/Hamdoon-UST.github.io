@@ -35,14 +35,15 @@ author:
   # Academic websites
   academia         : # URL
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    :
+  googlescholar    : "https://scholar.google.com/citations?user=WTJcCU4AAAAJ&hl=en"
   inspire-hep      : # URL
   impactstory      : # URL
   orcid            :
   semantic         : # URL
   ssrn             : # URL
   pubmed           :
-  researchgate     : # URL
+  researchgate     : "https://www.researchgate.net/profile/Hamdoon-Ijaz"
+  webofscience     : "https://www.webofscience.com/wos/author/record/QQX-7885-2026"
   scopus           : # URL
   zotero           : # URL
 
