@@ -4,8 +4,6 @@ excerpt: "I used computational fluid dynamics (CFD) in ANSYS Fluent to study how
 collection: portfolio
 date: 2022-10-17
 permalink: /projects/nanofluid-radiators/
-header:
-  teaser: projects/nanofluid-radiators/heat-transfer.jpg
 ---
 
 I used computational fluid dynamics (CFD) in ANSYS Fluent to study how adding nanoparticles to water affects its performance as a radiator coolant. In the radiator simulations, increasing the graphene oxide concentration from 6% to 10% by volume increased the predicted coolant temperature drop from 9.7 to 11.9 °C along the tube. A second study compared three oxide-based nanofluids and showed that the best-performing material depended on the flow regime. Copper oxide gave the strongest heat transfer at a Reynolds number of 2,000, while aluminium oxide performed best in the turbulent cases studied.
