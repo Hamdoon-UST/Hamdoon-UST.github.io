@@ -14,15 +14,23 @@
 
 <div class="{{ include.type | default: "list" }}__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    {% comment %}Grid keeps the theme fallback image. A list shows a teaser only when this item sets one.{% endcomment %}
+    {% assign show_teaser = false %}
     {% if include.type == "grid" and teaser %}
-      <div class="archive__item-teaser">
-        <img src=
-          {% if teaser contains "://" %}
-            "{{ teaser }}"
-          {% else %}
-            "{{ teaser | prepend: "/images/" | prepend: base_path }}"
-          {% endif %}
-          alt="">
+      {% assign show_teaser = true %}
+    {% elsif post.header.teaser %}
+      {% assign show_teaser = true %}
+    {% endif %}
+    {% if show_teaser %}
+      {% if teaser contains "://" %}
+        {% capture teaser_src %}{{ teaser | strip }}{% endcapture %}
+      {% else %}
+        {% capture teaser_src %}{{ teaser | strip | prepend: "/images/" | prepend: base_path }}{% endcapture %}
+      {% endif %}
+      <div class="archive__item-teaser{% unless include.type == "grid" %} archive__item-teaser--list{% endunless %}">
+        <a href="{{ base_path }}{{ post.url }}" rel="permalink">
+          <img src="{{ teaser_src | strip }}" alt="{{ title | strip_html | strip | escape }}">
+        </a>
       </div>
     {% endif %}
 

@@ -126,6 +126,45 @@
   padding-left: 1.2rem;
 }
 
+.research-theme-card {
+  list-style: none;
+  margin: 0.9rem 0 0.4rem;
+  max-width: min(70%, 36rem);
+}
+
+.research-theme-card a {
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--global-border-color);
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.research-theme-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.research-theme-card span {
+  display: block;
+  padding: 0.7rem 0.85rem 0.8rem;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* Listing teaser. Grid cards keep the theme crop; the projects list shows the figure. */
+.archive__item-teaser--list {
+  max-width: min(70%, 36rem);
+  margin: 0.35rem 0 0.85rem;
+}
+
+.archive__item-teaser--list img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .page__content .media-slot {
   max-width: 40rem;
   margin-left: auto;
