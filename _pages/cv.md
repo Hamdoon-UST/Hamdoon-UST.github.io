@@ -36,6 +36,7 @@ Reviewing
 
 * *Physics of Fluids* (AIP Publishing), 2026
 * *Engineering Applications of Artificial Intelligence* (Elsevier), 2026
+* *International Journal of Robust and Nonlinear Control* (WILEY), 2026
 
 Publications
 ======
